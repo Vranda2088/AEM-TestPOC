@@ -22,6 +22,7 @@ jobs:
            sudo git remote -v
            sudo git checkout develop
            sudo git pull 
+           sudo git filter-branch -- --all
            sudo git push poc develop
         shell: bash
            
