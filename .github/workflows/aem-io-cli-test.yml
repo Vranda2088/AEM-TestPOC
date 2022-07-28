@@ -21,11 +21,15 @@ jobs:
       
 #       - name: Install CM plugin
 #         run: aio plugins:install @adobe/aio-cli-plugin-cloudmanager
+
+      - name: Decrypt large secret
+        run: ./decrypt_secret.sh
       
       - name: Configure Authentication
         run: |
            echo You Selected ${{ inputs.env }}
-#           aio config:set ims.contexts.aio-cli-plugin-cloudmanager ./config.json --file --json
+           cat $HOME/secrets/config.json
+#           aio config:set ims.contexts.aio-cli-plugin-cloudmanager $HOME/secrets/config.json --file --json
 #           aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key ./private.key --file
            
            
