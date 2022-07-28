@@ -1,0 +1,20 @@
+# This is a basic workflow to help you get started with Actions
+# It triggers on each push to the main branch and sets up AIO CLI using "AIO CLI Setup - Action" and then installs the plugin for cloud manager on top of the existing CLI.
+name: AEM Conditional Checks
+
+on: 
+ workflow_dispatch:
+  inputs:
+   env:
+    description: 'Env Name'
+    default: 'dev'
+    type: environment
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+       
+      - name: Configure Authentication
+        run: |
+           echo You Selected ${{ inputs.env }}
