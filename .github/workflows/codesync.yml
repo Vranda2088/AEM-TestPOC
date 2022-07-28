@@ -9,6 +9,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GIT_PAT }}
+
         
       - name: Code Sync
         run: |
@@ -17,9 +20,9 @@ jobs:
            sudo git config credential.username ${{ secrets.GIT_USER }}
            sudo git config credential.helper ${{ secrets.GIT_PAT }}
            sudo git remote -v
-           sudo git checkout main
+           sudo git checkout develop
            sudo git pull 
-           sudo git push main
+           sudo git push poc develop
         shell: bash
            
         
