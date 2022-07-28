@@ -17,9 +17,9 @@ jobs:
            sudo git remote add poc https://github.com/Vranda1188/AEM-Remote.git
            sudo git config credential.username ${{ secrets.GIT_USER }}
            sudo git config credential.helper ${{ secrets.GIT_PAT }}
-           sudo git checkout origin/main
+           sudo git checkout main
            sudo git pull 
-           sudo git push poc/main
+           sudo git push main
         shell: bash
            
         
