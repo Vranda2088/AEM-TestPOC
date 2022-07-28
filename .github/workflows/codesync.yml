@@ -15,6 +15,8 @@ jobs:
         run: |
            sudo apt-get update && sudo apt-get install -y unzip git
            git remote add poc https://github.com/Vranda2088/AEM-Remote.git
+           git config credential.username $GIT_User
+           git config credential.helper "!echo password=$GIT_PAT; echo"
            git checkout develop
            git pull 
            git push poc develop
