@@ -28,6 +28,8 @@ jobs:
         run: |
           chmod 775 * 
           sh decrypt_secret.sh
+        env:
+          PASSPHRASE: ${{ secrets.PASSPHRASE }}
           
       
       - name: Configure Authentication
