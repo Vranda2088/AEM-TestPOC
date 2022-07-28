@@ -16,11 +16,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-#       - name: Setup CLI
-#         uses: adobe/aio-cli-setup-action@1.1.0
+      - name: Setup CLI
+        uses: adobe/aio-cli-setup-action@1.1.0
       
-#       - name: Install CM plugin
-#         run: aio plugins:install @adobe/aio-cli-plugin-cloudmanager
+      - name: Install CM plugin
+        run: aio plugins:install @adobe/aio-cli-plugin-cloudmanager
+        
       - name: Checkout
         uses: actions/checkout@v3
         
@@ -36,7 +37,7 @@ jobs:
         run: |
            echo You Selected ${{ inputs.env }}
            cat $HOME/secrets/config.json
-#           aio config:set ims.contexts.aio-cli-plugin-cloudmanager $HOME/secrets/config.json --file --json
-#           aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key ./private.key --file
+           aio config:set ims.contexts.aio-cli-plugin-cloudmanager $HOME/secrets/config.json --file --json
+           aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key ./private.key --file
            
            
