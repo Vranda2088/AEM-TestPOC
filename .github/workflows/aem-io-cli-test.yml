@@ -8,7 +8,7 @@ on:
    env:
     description: 'Env Name'
     default: 'dev'
-    type: choice
+    type: environment
     options:
     - dev
     - sit
