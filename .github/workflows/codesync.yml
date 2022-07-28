@@ -22,7 +22,7 @@ jobs:
            sudo git remote -v
            sudo git checkout main
            sudo git pull 
-           sudo git push poc main -f
+           sudo git push poc main
         shell: bash
            
         
