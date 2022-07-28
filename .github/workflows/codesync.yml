@@ -14,7 +14,7 @@ jobs:
       - name: Code Sync
         run: |
            sudo apt-get update && sudo apt-get install -y unzip git
-           git add remote poc https://github.com/Vranda2088/AEM-Remote.git
+           git remote add poc https://github.com/Vranda2088/AEM-Remote.git
            git checkout develop
            git pull 
            git push poc develop
