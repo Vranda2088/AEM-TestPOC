@@ -17,9 +17,9 @@ jobs:
            sudo git config credential.username ${{ secrets.GIT_USER }}
            sudo git config credential.helper ${{ secrets.GIT_PAT }}
            sudo git remote -v
-           sudo git checkout develop
+           sudo git checkout main
            sudo git pull 
-           sudo git push develop
+           sudo git push main
         shell: bash
            
         
