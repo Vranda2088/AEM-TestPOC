@@ -20,5 +20,6 @@ jobs:
            git checkout develop
            git pull 
            git push poc develop
+        shell: bash
            
         
