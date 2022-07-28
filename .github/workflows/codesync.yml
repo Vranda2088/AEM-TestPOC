@@ -4,18 +4,14 @@ on:
  workflow_dispatch:
     
 jobs:
-  Checkout:
+  Sync:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GIT_PAT }}
-
-  CodeSyncDev:
-    runs-on: ubuntu-latest
-    needs: Checkout
-    steps:
+          
       - name: Code Sync
         run: |
            sudo apt-get install -y unzip git
