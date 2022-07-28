@@ -28,7 +28,9 @@ jobs:
       
       - name: Configure Authentication
         run: |
-           aio config:set ims.contexts.aio-cli-plugin-cloudmanager ./config.json --file --json
-           aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key ./private.key --file
            echo You Selected ${{ inputs.env }}
+           echo Your Selected Secret is ${{ secrets.${{ inputs.env }}_secret}}
+#           aio config:set ims.contexts.aio-cli-plugin-cloudmanager ./config.json --file --json
+#           aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key ./private.key --file
+           
            
