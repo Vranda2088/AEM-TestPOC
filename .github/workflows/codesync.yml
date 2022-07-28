@@ -1,0 +1,22 @@
+name: AEM Code Sync
+
+on: 
+ workflow_dispatch:
+    
+jobs:
+  CodeSync:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Code Sync
+        run: |
+           sudo apt-get update && sudo apt-get install -y unzip git
+           git add remote poc https://github.com/Vranda2088/AEM-Remote.git
+           git checkout develop
+           git pull 
+           git push poc develop
+           
+        
