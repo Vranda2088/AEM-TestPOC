@@ -9,27 +9,22 @@ on:
     description: 'Env Name'
     default: 'dev'
     type: environment
-    options:
-    - dev
-    - sit
-    - stage
-    - prod
+
     
 jobs:
   Configure-Adobe-IO:
     runs-on: ubuntu-latest
     steps:
     
-      - name: Setup CLI
-        uses: adobe/aio-cli-setup-action@1.1.0
+#       - name: Setup CLI
+#         uses: adobe/aio-cli-setup-action@1.1.0
       
-      - name: Install CM plugin
-        run: aio plugins:install @adobe/aio-cli-plugin-cloudmanager
+#       - name: Install CM plugin
+#         run: aio plugins:install @adobe/aio-cli-plugin-cloudmanager
       
       - name: Configure Authentication
         run: |
            echo You Selected ${{ inputs.env }}
-           echo Your Selected Secret is ${{ secrets.dev_secret}}
 #           aio config:set ims.contexts.aio-cli-plugin-cloudmanager ./config.json --file --json
 #           aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key ./private.key --file
            
