@@ -14,12 +14,12 @@ jobs:
         run: |
            sudo apt-get install -y unzip git
            sudo git remote -v
+           sudo git remote add poc https://github.com/Vranda2088/AEM-Remote.git
+           sudo git config credential.username ${{ secrets.GIT_USER }}
+           sudo git config credential.helper ${{ secrets.GIT_PAT }}
            sudo git checkout origin/develop
-#           git remote add poc https://github.com/Vranda2088/AEM-Remote.git
-#           git config credential.username ${{ secrets.GIT_USER }}
-#           git config credential.helper ${{ secrets.GIT_PAT }}
-#           git pull 
-#           git push poc develop
+           sudo git pull 
+           sudo git push poc/develop
         shell: bash
            
         
