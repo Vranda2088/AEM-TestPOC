@@ -13,7 +13,8 @@ jobs:
       - name: Code Sync
         run: |
            sudo apt-get install -y unzip git
-            git checkout develop
+           sudo git remote -v
+           sudo git checkout origin/develop
 #           git remote add poc https://github.com/Vranda2088/AEM-Remote.git
 #           git config credential.username ${{ secrets.GIT_USER }}
 #           git config credential.helper ${{ secrets.GIT_PAT }}
