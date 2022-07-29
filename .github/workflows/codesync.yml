@@ -23,6 +23,7 @@ jobs:
            sudo git pull 
            sudo git filter-branch -- --all
            sudo git push poc develop
+           echo This is new change
         shell: bash
         
 
