@@ -1,8 +1,7 @@
 name: AEM Code Sync
 
-on: 
- workflow_dispatch:
-    
+on: push
+
 jobs:
   Sync:
     runs-on: ubuntu-latest
