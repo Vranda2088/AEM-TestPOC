@@ -19,6 +19,7 @@ jobs:
            sudo git config credential.username ${{ secrets.GIT_USER }}
            sudo git config credential.helper ${{ secrets.GIT_PAT }}
            sudo git remote -v
+           sudo git fetch --unshallow
            sudo git checkout develop
            sudo git pull 
            sudo git filter-branch -- --all
