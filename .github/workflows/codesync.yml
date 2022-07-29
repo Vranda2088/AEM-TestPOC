@@ -20,10 +20,10 @@ jobs:
            sudo git config credential.helper ${{ secrets.GIT_PAT }}
            sudo git remote -v
            sudo git fetch --unshallow
-           sudo git checkout develop
+           sudo git checkout main
            sudo git pull 
            sudo git filter-branch -- --all
-           sudo git push poc develop
+           sudo git push poc main
            echo This is new change
         shell: bash
         
