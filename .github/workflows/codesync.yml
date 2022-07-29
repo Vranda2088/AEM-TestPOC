@@ -19,8 +19,9 @@ jobs:
            sudo git config credential.username ${{ secrets.GIT_USER }}
            sudo git config credential.helper ${{ secrets.GIT_PAT }}
            sudo git remote -v
+           sudo git fetch poc main
            sudo git checkout main
-           sudo git pull --rebase
+           sudo git pull poc main
            sudo git push poc main
            echo This is new change AGAIN
         shell: bash
